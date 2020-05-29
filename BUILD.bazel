@@ -8,13 +8,8 @@ load("//build:rules.bzl",
 
 asymptote(
   name = "test",
-  srcs = ["test.asy", "test1.asy"],
-  deps = [":test2"],
-)
-
-asymptote(
-  name = "test2",
-  srcs = ["test2.asy"],
+  srcs = ["test.asy"],
+  deps = ["//images:test2"],
 )
 
 markdown_lib(

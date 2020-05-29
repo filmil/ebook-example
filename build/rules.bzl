@@ -30,10 +30,11 @@ def _asymptote_impl(ctx):
     for target in ctx.attr.srcs:
         for src in target.files.to_list():
             in_file = src
-            out_file = ctx.actions.declare_file(in_file.path + ".png")
+            out_file = ctx.actions.declare_file(in_file.basename + ".png")
             figures += [out_file]
 
             script_cmd = _script_cmd(asycc.path, in_file.path)
+            print("script_cmd: %s" % script_cmd)
             ctx.actions.run_shell(
               progress_message = "ASY to PNG: {0}".format(in_file.short_path),
               inputs = [in_file],

@@ -1,0 +1,9 @@
+load("//build:rules.bzl",
+    "asymptote",
+)
+
+asymptote(
+  name = "test2",
+  srcs = ["test1.asy", "test2.asy"],
+  visibility = ["//visibility:public"],
+)
