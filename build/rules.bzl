@@ -34,7 +34,6 @@ def _asymptote_impl(ctx):
             figures += [out_file]
 
             script_cmd = _script_cmd(asycc.path, in_file.path)
-            print("script_cmd: %s" % script_cmd)
             ctx.actions.run_shell(
               progress_message = "ASY to PNG: {0}".format(in_file.short_path),
               inputs = [in_file],
