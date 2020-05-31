@@ -29,6 +29,24 @@ Yes, it's that easy.  This will run the commands needed to produce a PDF file,
 an ePub file and a mobi (Kindle) format file.  Find those files in the
 `bazel-bin` directory once the build process ends.
 
+If you want to build specific formats, the following commands apply:
+
+```
+bazel build //:book_epub
+```
+
+This will build a book in the EPUB format.  Once build completes, find it in
+the directory `bazel-bin/book_epub.epub`.
+
+```
+bazel build //:book_kindle
+```
+
+This will build a book in Kindle's MOBI format.  Once the build completes, find
+it in the directory `bazel-bin/book_kindle.mobi`.  You should be able to upload
+this book to either your Amazon digital library, or your Kindle device and read
+it right away.
+
 # Cleanup
 
 ```

@@ -22,7 +22,7 @@ markdown_lib(
 )
 
 ebook_epub(
-  name = "book",
+  name = "book_epub",
   deps = [":md"],
   metadata_xml = "epub-metadata.xml",
   title_yaml = "title.yaml",
