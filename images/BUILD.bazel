@@ -1,4 +1,4 @@
-load("//build:rules.bzl",
+load("@bazel_ebook//build:rules.bzl",
     "asymptote",
     "markdown_lib",
 )
