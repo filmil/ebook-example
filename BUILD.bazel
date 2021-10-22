@@ -17,8 +17,13 @@ markdown_lib(
   srcs = [
 		"book.ch001.md",
 		"book.ch002.md",
+        "book.ch004.md",
   ],
-  deps = [":test", "//images:md",],
+  deps = [
+    "//images:dot",
+    "//images:md",
+    ":test",
+  ],
 )
 
 ebook_epub(
